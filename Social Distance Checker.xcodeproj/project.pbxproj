@@ -14,6 +14,11 @@
 		953267EA2427BBB9002FF31E /* Social_Distance_Checker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 953267E82427BBB9002FF31E /* Social_Distance_Checker.xcdatamodeld */; };
 		953267EC2427BBBC002FF31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953267EB2427BBBC002FF31E /* Assets.xcassets */; };
 		953267EF2427BBBC002FF31E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953267ED2427BBBC002FF31E /* LaunchScreen.storyboard */; };
+		953267F72427C73F002FF31E /* Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953267F62427C73F002FF31E /* Vision.swift */; };
+		953267F92427CE26002FF31E /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 953267F82427CE26002FF31E /* YOLOv3Tiny.mlmodel */; };
+		953267FB2427E420002FF31E /* Resnet50FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 953267FA2427E420002FF31E /* Resnet50FP16.mlmodel */; };
+		95FDC2D22427E7960038B6CA /* YOLOv3Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 95FDC2D12427E7960038B6CA /* YOLOv3Int8LUT.mlmodel */; };
+		95FDC2D4242832960038B6CA /* YOLOv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 95FDC2D3242832950038B6CA /* YOLOv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		953267EB2427BBBC002FF31E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		953267EE2427BBBC002FF31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		953267F02427BBBC002FF31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953267F62427C73F002FF31E /* Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
+		953267F82427CE26002FF31E /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3Tiny.mlmodel; path = ../../../Downloads/YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
+		953267FA2427E420002FF31E /* Resnet50FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50FP16.mlmodel; path = ../../../Downloads/Resnet50FP16.mlmodel; sourceTree = "<group>"; };
+		95FDC2D12427E7960038B6CA /* YOLOv3Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3Int8LUT.mlmodel; path = ../../../Downloads/YOLOv3Int8LUT.mlmodel; sourceTree = "<group>"; };
+		95FDC2D3242832950038B6CA /* YOLOv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3.mlmodel; path = ../../../Downloads/YOLOv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,11 @@
 				953267E12427BBB9002FF31E /* SceneDelegate.swift */,
 				953267E32427BBB9002FF31E /* ViewController.swift */,
 				953267E52427BBB9002FF31E /* Main.storyboard */,
+				953267F62427C73F002FF31E /* Vision.swift */,
+				953267F82427CE26002FF31E /* YOLOv3Tiny.mlmodel */,
+				953267FA2427E420002FF31E /* Resnet50FP16.mlmodel */,
+				95FDC2D12427E7960038B6CA /* YOLOv3Int8LUT.mlmodel */,
+				95FDC2D3242832950038B6CA /* YOLOv3.mlmodel */,
 				953267EB2427BBBC002FF31E /* Assets.xcassets */,
 				953267ED2427BBBC002FF31E /* LaunchScreen.storyboard */,
 				953267F02427BBBC002FF31E /* Info.plist */,
@@ -142,8 +157,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				953267E42427BBB9002FF31E /* ViewController.swift in Sources */,
+				95FDC2D22427E7960038B6CA /* YOLOv3Int8LUT.mlmodel in Sources */,
+				953267FB2427E420002FF31E /* Resnet50FP16.mlmodel in Sources */,
+				95FDC2D4242832960038B6CA /* YOLOv3.mlmodel in Sources */,
 				953267EA2427BBB9002FF31E /* Social_Distance_Checker.xcdatamodeld in Sources */,
+				953267F72427C73F002FF31E /* Vision.swift in Sources */,
 				953267E02427BBB9002FF31E /* AppDelegate.swift in Sources */,
+				953267F92427CE26002FF31E /* YOLOv3Tiny.mlmodel in Sources */,
 				953267E22427BBB9002FF31E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
