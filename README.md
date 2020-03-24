@@ -1,4 +1,4 @@
-# SocialDistance
+# Social Distancer
 This app keeps people 6 feet away
 
 This simple but useful App uses your iPhone’s camera to alert you when someone is within your six-foot safety zone. 
