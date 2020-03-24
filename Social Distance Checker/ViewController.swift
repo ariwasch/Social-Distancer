@@ -15,7 +15,9 @@ import GoogleMobileAds
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     var views = [UIView]()
-    var bannerView: GADBannerView!
+    var labels = [UILabel]()
+
+//    var bannerView: GADBannerView!
 
     @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
@@ -34,12 +36,14 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
         captureSession.addOutput(dataOutput)
         
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        bannerView.adUnitID = "ca-app-pub-2006923484031604~8393105852"
-        bannerView.rootViewController = self
-
-        addBannerViewToView(bannerView)
-        bannerView.load(GADRequest())
+//        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+////        bannerView.adUnitID = "ca-app-pub-2006923484031604~8393105852"
+//        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+//
+//        bannerView.rootViewController = self
+//
+//        addBannerViewToView(bannerView)
+//        bannerView.load(GADRequest())
 
     }
 
@@ -60,6 +64,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                         }
                             self.views.removeAll()
                         }
+                    if(self.labels.count > 0){
+                        for object in self.labels{
+                            object.removeFromSuperview()
+                        }
+                            self.labels.removeAll()
+                        }
                     for object in array!{
                         if(((object as! VNRecognizedObjectObservation).labels[0].identifier == "person") && ((object as! VNRecognizedObjectObservation).labels[0].confidence > 0.51)){
                             var tempView = UIView()
@@ -69,13 +79,29 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                             let y = self.view.frame.width * (object as AnyObject).boundingBox.minY
 //                            self.label.text = "Y: \(y) W: \(width) h: \(height)"
                             tempView.frame = CGRect(x: y, y: x, width: height, height: width)
+                            
+                            let label = UILabel(frame: CGRect(x: y, y: x, width: height, height: 21))
+//                            label.center = CGPoint(x:  self.view.frame.width / 2, y:          self.view.frame.height - 21 - (bannerView.adSize.size.height * 1.5)  )
+                            label.textAlignment = .center
+//                            label.alpha = 0.3
+                            label.textColor = .black
+//                            self.view.addSubview(label)
                             if(height < 180 && width < 470){
                                 tempView.backgroundColor = .green
+                                label.backgroundColor = .green
+                                label.text = "You are safe!"
+
                             }else{
                                 tempView.backgroundColor = .red
+                                label.backgroundColor = .red
+                                label.text = "Stay back!"
+
                             }
                             tempView.alpha = 0.3
+                            
                             self.views.append(tempView)
+                            self.labels.append(label)
+
                         }
                     }
                     if(self.views.count > 0){
@@ -83,6 +109,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                             self.view.addSubview(object)
                         }
                     }
+                    if(self.labels.count > 0){
+                        for object in self.labels{
+                            self.view.addSubview(object)
+                        }
+                        
+                    }
+
                 }
             }
         }
