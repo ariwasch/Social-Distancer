@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2565B99A882716BA3F2187C2 /* Pods_Social_Distance_Checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C8A6160E97CE2A659BBB79 /* Pods_Social_Distance_Checker.framework */; };
 		953267E02427BBB9002FF31E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953267DF2427BBB9002FF31E /* AppDelegate.swift */; };
 		953267E22427BBB9002FF31E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953267E12427BBB9002FF31E /* SceneDelegate.swift */; };
 		953267E42427BBB9002FF31E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953267E32427BBB9002FF31E /* ViewController.swift */; };
@@ -15,13 +16,11 @@
 		953267EC2427BBBC002FF31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953267EB2427BBBC002FF31E /* Assets.xcassets */; };
 		953267EF2427BBBC002FF31E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953267ED2427BBBC002FF31E /* LaunchScreen.storyboard */; };
 		953267F72427C73F002FF31E /* Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953267F62427C73F002FF31E /* Vision.swift */; };
-		953267F92427CE26002FF31E /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 953267F82427CE26002FF31E /* YOLOv3Tiny.mlmodel */; };
-		953267FB2427E420002FF31E /* Resnet50FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 953267FA2427E420002FF31E /* Resnet50FP16.mlmodel */; };
-		95FDC2D22427E7960038B6CA /* YOLOv3Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 95FDC2D12427E7960038B6CA /* YOLOv3Int8LUT.mlmodel */; };
 		95FDC2D4242832960038B6CA /* YOLOv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 95FDC2D3242832950038B6CA /* YOLOv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A51F38BC8B73FF1FD6AC69C /* Pods-Social Distance Checker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Distance Checker.release.xcconfig"; path = "Target Support Files/Pods-Social Distance Checker/Pods-Social Distance Checker.release.xcconfig"; sourceTree = "<group>"; };
 		953267DC2427BBB9002FF31E /* Social Distance Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Distance Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		953267DF2427BBB9002FF31E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		953267E12427BBB9002FF31E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,10 +31,9 @@
 		953267EE2427BBBC002FF31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		953267F02427BBBC002FF31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		953267F62427C73F002FF31E /* Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
-		953267F82427CE26002FF31E /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3Tiny.mlmodel; path = ../../../Downloads/YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
-		953267FA2427E420002FF31E /* Resnet50FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50FP16.mlmodel; path = ../../../Downloads/Resnet50FP16.mlmodel; sourceTree = "<group>"; };
-		95FDC2D12427E7960038B6CA /* YOLOv3Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3Int8LUT.mlmodel; path = ../../../Downloads/YOLOv3Int8LUT.mlmodel; sourceTree = "<group>"; };
 		95FDC2D3242832950038B6CA /* YOLOv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3.mlmodel; path = ../../../Downloads/YOLOv3.mlmodel; sourceTree = "<group>"; };
+		9A2D631759CBA35FB653980B /* Pods-Social Distance Checker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Distance Checker.debug.xcconfig"; path = "Target Support Files/Pods-Social Distance Checker/Pods-Social Distance Checker.debug.xcconfig"; sourceTree = "<group>"; };
+		E3C8A6160E97CE2A659BBB79 /* Pods_Social_Distance_Checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Distance_Checker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2565B99A882716BA3F2187C2 /* Pods_Social_Distance_Checker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102ED0C38A5E7D30215397B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A2D631759CBA35FB653980B /* Pods-Social Distance Checker.debug.xcconfig */,
+				3A51F38BC8B73FF1FD6AC69C /* Pods-Social Distance Checker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		953267D32427BBB9002FF31E = {
 			isa = PBXGroup;
 			children = (
 				953267DE2427BBB9002FF31E /* Social Distance Checker */,
 				953267DD2427BBB9002FF31E /* Products */,
+				102ED0C38A5E7D30215397B0 /* Pods */,
+				B438CAED40C9BAE041C2F280 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,9 +83,6 @@
 				953267E32427BBB9002FF31E /* ViewController.swift */,
 				953267E52427BBB9002FF31E /* Main.storyboard */,
 				953267F62427C73F002FF31E /* Vision.swift */,
-				953267F82427CE26002FF31E /* YOLOv3Tiny.mlmodel */,
-				953267FA2427E420002FF31E /* Resnet50FP16.mlmodel */,
-				95FDC2D12427E7960038B6CA /* YOLOv3Int8LUT.mlmodel */,
 				95FDC2D3242832950038B6CA /* YOLOv3.mlmodel */,
 				953267EB2427BBBC002FF31E /* Assets.xcassets */,
 				953267ED2427BBBC002FF31E /* LaunchScreen.storyboard */,
@@ -85,6 +92,14 @@
 			path = "Social Distance Checker";
 			sourceTree = "<group>";
 		};
+		B438CAED40C9BAE041C2F280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3C8A6160E97CE2A659BBB79 /* Pods_Social_Distance_Checker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 953267F32427BBBC002FF31E /* Build configuration list for PBXNativeTarget "Social Distance Checker" */;
 			buildPhases = (
+				61884EF62BE97951964C19CC /* [CP] Check Pods Manifest.lock */,
 				953267D82427BBB9002FF31E /* Sources */,
 				953267D92427BBB9002FF31E /* Frameworks */,
 				953267DA2427BBB9002FF31E /* Resources */,
+				663F4D50A468CAA22386E4FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,19 +168,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61884EF62BE97951964C19CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Social Distance Checker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		663F4D50A468CAA22386E4FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Social Distance Checker/Pods-Social Distance Checker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Social Distance Checker/Pods-Social Distance Checker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Social Distance Checker/Pods-Social Distance Checker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		953267D82427BBB9002FF31E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				953267E42427BBB9002FF31E /* ViewController.swift in Sources */,
-				95FDC2D22427E7960038B6CA /* YOLOv3Int8LUT.mlmodel in Sources */,
-				953267FB2427E420002FF31E /* Resnet50FP16.mlmodel in Sources */,
 				95FDC2D4242832960038B6CA /* YOLOv3.mlmodel in Sources */,
 				953267EA2427BBB9002FF31E /* Social_Distance_Checker.xcdatamodeld in Sources */,
 				953267F72427C73F002FF31E /* Vision.swift in Sources */,
 				953267E02427BBB9002FF31E /* AppDelegate.swift in Sources */,
-				953267F92427CE26002FF31E /* YOLOv3Tiny.mlmodel in Sources */,
 				953267E22427BBB9002FF31E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,11 +362,13 @@
 		};
 		953267F42427BBBC002FF31E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A2D631759CBA35FB653980B /* Pods-Social Distance Checker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3K6Q4C6RYZ;
 				INFOPLIST_FILE = "Social Distance Checker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,17 +376,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Ari-Wasch.Social-Distance-Checker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		953267F52427BBBC002FF31E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A51F38BC8B73FF1FD6AC69C /* Pods-Social Distance Checker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3K6Q4C6RYZ;
 				INFOPLIST_FILE = "Social Distance Checker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,7 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Ari-Wasch.Social-Distance-Checker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
