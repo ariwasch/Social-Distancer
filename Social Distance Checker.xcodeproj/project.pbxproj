@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2565B99A882716BA3F2187C2 /* Pods_Social_Distance_Checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C8A6160E97CE2A659BBB79 /* Pods_Social_Distance_Checker.framework */; };
+		9531D2D3242BE49200BBBB72 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9531D2D2242BE49200BBBB72 /* Instructions.swift */; };
+		9531D2D7242C0BEB00BBBB72 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9531D2D6242C0BEB00BBBB72 /* LoadingScreen.swift */; };
 		953267E02427BBB9002FF31E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953267DF2427BBB9002FF31E /* AppDelegate.swift */; };
 		953267E22427BBB9002FF31E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953267E12427BBB9002FF31E /* SceneDelegate.swift */; };
 		953267E42427BBB9002FF31E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953267E32427BBB9002FF31E /* ViewController.swift */; };
@@ -16,11 +18,14 @@
 		953267EC2427BBBC002FF31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953267EB2427BBBC002FF31E /* Assets.xcassets */; };
 		953267EF2427BBBC002FF31E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953267ED2427BBBC002FF31E /* LaunchScreen.storyboard */; };
 		953267F72427C73F002FF31E /* Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953267F62427C73F002FF31E /* Vision.swift */; };
-		95FDC2D4242832960038B6CA /* YOLOv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 95FDC2D3242832950038B6CA /* YOLOv3.mlmodel */; };
+		953D4381242C0E6E0021E0AD /* socialDistancing.png in Resources */ = {isa = PBXBuildFile; fileRef = 953D4380242C0E6E0021E0AD /* socialDistancing.png */; };
+		956B5292242A7CA0005E352E /* YOLOv3FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 956B5291242A7CA0005E352E /* YOLOv3FP16.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A51F38BC8B73FF1FD6AC69C /* Pods-Social Distance Checker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Distance Checker.release.xcconfig"; path = "Target Support Files/Pods-Social Distance Checker/Pods-Social Distance Checker.release.xcconfig"; sourceTree = "<group>"; };
+		9531D2D2242BE49200BBBB72 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
+		9531D2D6242C0BEB00BBBB72 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		953267DC2427BBB9002FF31E /* Social Distancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Distancer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		953267DF2427BBB9002FF31E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		953267E12427BBB9002FF31E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +36,8 @@
 		953267EE2427BBBC002FF31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		953267F02427BBBC002FF31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		953267F62427C73F002FF31E /* Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
-		95FDC2D3242832950038B6CA /* YOLOv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3.mlmodel; path = ../../../Downloads/YOLOv3.mlmodel; sourceTree = "<group>"; };
+		953D4380242C0E6E0021E0AD /* socialDistancing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = socialDistancing.png; path = Assets.xcassets/AppIcon.appiconset/socialDistancing.png; sourceTree = "<group>"; };
+		956B5291242A7CA0005E352E /* YOLOv3FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3FP16.mlmodel; path = ../../../Downloads/YOLOv3FP16.mlmodel; sourceTree = "<group>"; };
 		9A2D631759CBA35FB653980B /* Pods-Social Distance Checker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Distance Checker.debug.xcconfig"; path = "Target Support Files/Pods-Social Distance Checker/Pods-Social Distance Checker.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C8A6160E97CE2A659BBB79 /* Pods_Social_Distance_Checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Distance_Checker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,10 +88,13 @@
 				953267E12427BBB9002FF31E /* SceneDelegate.swift */,
 				953267E32427BBB9002FF31E /* ViewController.swift */,
 				953267E52427BBB9002FF31E /* Main.storyboard */,
+				9531D2D2242BE49200BBBB72 /* Instructions.swift */,
 				953267F62427C73F002FF31E /* Vision.swift */,
-				95FDC2D3242832950038B6CA /* YOLOv3.mlmodel */,
+				956B5291242A7CA0005E352E /* YOLOv3FP16.mlmodel */,
 				953267EB2427BBBC002FF31E /* Assets.xcassets */,
 				953267ED2427BBBC002FF31E /* LaunchScreen.storyboard */,
+				953D4380242C0E6E0021E0AD /* socialDistancing.png */,
+				9531D2D6242C0BEB00BBBB72 /* LoadingScreen.swift */,
 				953267F02427BBBC002FF31E /* Info.plist */,
 				953267E82427BBB9002FF31E /* Social_Distance_Checker.xcdatamodeld */,
 			);
@@ -162,6 +171,7 @@
 			files = (
 				953267EF2427BBBC002FF31E /* LaunchScreen.storyboard in Resources */,
 				953267EC2427BBBC002FF31E /* Assets.xcassets in Resources */,
+				953D4381242C0E6E0021E0AD /* socialDistancing.png in Resources */,
 				953267E72427BBB9002FF31E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,10 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9531D2D7242C0BEB00BBBB72 /* LoadingScreen.swift in Sources */,
 				953267E42427BBB9002FF31E /* ViewController.swift in Sources */,
-				95FDC2D4242832960038B6CA /* YOLOv3.mlmodel in Sources */,
+				9531D2D3242BE49200BBBB72 /* Instructions.swift in Sources */,
 				953267EA2427BBB9002FF31E /* Social_Distance_Checker.xcdatamodeld in Sources */,
 				953267F72427C73F002FF31E /* Vision.swift in Sources */,
+				956B5292242A7CA0005E352E /* YOLOv3FP16.mlmodel in Sources */,
 				953267E02427BBB9002FF31E /* AppDelegate.swift in Sources */,
 				953267E22427BBB9002FF31E /* SceneDelegate.swift in Sources */,
 			);
@@ -366,7 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 3K6Q4C6RYZ;
 				INFOPLIST_FILE = "Social Distance Checker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -374,7 +386,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ari-Wasch.Social-Distancer";
 				PRODUCT_NAME = "Social Distancer";
 				SWIFT_VERSION = 5.0;
@@ -388,7 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 3K6Q4C6RYZ;
 				INFOPLIST_FILE = "Social Distance Checker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -396,7 +408,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ari-Wasch.Social-Distancer";
 				PRODUCT_NAME = "Social Distancer";
 				SWIFT_VERSION = 5.0;

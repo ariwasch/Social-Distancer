@@ -16,19 +16,34 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     var views = [UIView]()
     var labels = [UILabel]()
+    var tempLabel = UILabel()
+    var tempView = UIView()
+    @IBOutlet weak var info: UIButton!
+    
+    var bannerView: GADBannerView!
 
-//    var bannerView: GADBannerView!
-
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var hiddenLabel: UILabel!
+    @IBOutlet weak var labelTitle: UILabel!
+    var model:VNCoreMLModel? = nil
     override func viewDidLoad() {
-        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        model = try? VNCoreMLModel(for: YOLOv3FP16().model)
         super.viewDidLoad()
         let captureSession = AVCaptureSession()
         guard let captureDevice = AVCaptureDevice.default(for: .video) else {return}
+            
         guard let input = try? AVCaptureDeviceInput(device: captureDevice) else {return}
         captureSession.addInput(input)
+        captureSession.sessionPreset = .vga640x480
         captureSession.startRunning()
+        if let frameSupportRange = captureDevice.activeFormat.videoSupportedFrameRateRanges.first {
+            captureSession.beginConfiguration()
+            // currentCamera.activeVideoMinFrameDuration = CMTimeMake(1, Int32(frameSupportRange.maxFrameRate))
+            captureDevice.activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: 25)
+            captureSession.commitConfiguration()
+        }
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         view.layer.addSublayer(previewLayer)
         previewLayer.frame = view.frame
         
@@ -36,91 +51,97 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
         captureSession.addOutput(dataOutput)
         
-//        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-////        bannerView.adUnitID = "ca-app-pub-2006923484031604~8393105852"
-//        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
-//
-//        bannerView.rootViewController = self
-//
-//        addBannerViewToView(bannerView)
-//        bannerView.load(GADRequest())
+        self.view.bringSubviewToFront(self.hiddenLabel);
+        self.view.bringSubviewToFront(self.labelTitle);
+        self.view.bringSubviewToFront(self.info);
+                bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+                bannerView.adUnitID = "ca-app-pub-2006923484031604/1126410802"
+//                bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111" //test ad
+                bannerView.rootViewController = self
+                bannerView.load(GADRequest())
+//        bannerView.frame = CGRect(x: 1,y: 1,width: 1,height: 1)
+//        bannerView.backgroundColor = .blue
+        addBannerViewToView(bannerView)
+        self.view.bringSubviewToFront(bannerView);
 
     }
 
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else  {return}
-        guard let model = try? VNCoreMLModel(for: YOLOv3().model) else {return}
-        let request = VNCoreMLRequest(model: model) { (finishedReq, err) in
+        let request = VNCoreMLRequest(model: model!) { (finishedReq, err) in
             let array = finishedReq.results
-
             if(array!.count > 0){
-//                let poop = array?.first as! VNRecognizedObjectObservation
-//                print("object", poop.labels[0].identifier, array!.count)
-                DispatchQueue.main.async {
-                    if(self.views.count > 0){
-                        for object in self.views{
-                            object.removeFromSuperview()
-                        }
-                            self.views.removeAll()
-                        }
-                    if(self.labels.count > 0){
-                        for object in self.labels{
-                            object.removeFromSuperview()
-                        }
-                            self.labels.removeAll()
-                        }
-                    for object in array!{
-                        if(((object as! VNRecognizedObjectObservation).labels[0].identifier == "person") && ((object as! VNRecognizedObjectObservation).labels[0].confidence > 0.51)){
-                            var tempView = UIView()
-                            let width = self.view.frame.height * (object as AnyObject).boundingBox.width
-                            let height = self.view.frame.width * (object as AnyObject).boundingBox.height
-                            let x = self.view.frame.height * (object as AnyObject).boundingBox.minX
-                            let y = self.view.frame.width * (object as AnyObject).boundingBox.minY
-//                            self.label.text = "Y: \(y) W: \(width) h: \(height)"
-                            tempView.frame = CGRect(x: y, y: x, width: height, height: width)
-                            
-                            let label = UILabel(frame: CGRect(x: y, y: x, width: height, height: 21))
-//                            label.center = CGPoint(x:  self.view.frame.width / 2, y:          self.view.frame.height - 21 - (bannerView.adSize.size.height * 1.5)  )
-                            label.textAlignment = .center
-//                            label.alpha = 0.3
-                            label.textColor = .black
-//                            self.view.addSubview(label)
-                            if(height < 180 && width < 470){
-                                tempView.backgroundColor = .green
-                                label.backgroundColor = .green
-                                label.text = "You are safe!"
-
-                            }else{
-                                tempView.backgroundColor = .red
-                                label.backgroundColor = .red
-                                label.text = "Stay back!"
-
-                            }
-                            tempView.alpha = 0.3
-                            
-                            self.views.append(tempView)
-                            self.labels.append(label)
-
-                        }
-                    }
-                    if(self.views.count > 0){
-                        for object in self.views{
-                            self.view.addSubview(object)
-                        }
-                    }
-                    if(self.labels.count > 0){
-                        for object in self.labels{
-                            self.view.addSubview(object)
-                        }
-                        
-                    }
-
-                }
+                self.addLayers(array: array!)
+            }else{
+                self.clearLayers()
             }
         }
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
+    
+    func addLayers(array: [Any?]){
+        clearLayers()
+
+        DispatchQueue.main.async {
+        for object in array{
+            if(((object as! VNRecognizedObjectObservation).labels[0].identifier == "person") && ((object as! VNRecognizedObjectObservation).labels[0].confidence > 0.51)){
+                
+                let width = self.view.frame.height * (object as AnyObject).boundingBox.width
+                let height = self.view.frame.width * (object as AnyObject).boundingBox.height
+                let x = self.view.frame.height * (object as AnyObject).boundingBox.minX
+                let y = self.view.frame.width * (object as AnyObject).boundingBox.minY
+                let tempView = UIView(frame: CGRect(x: y, y: x, width: height, height: width))
+                let label = UILabel(frame: CGRect(x: y, y: x, width: height, height: 21))
+
+                if(UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft){
+                    label.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+                    label.bounds = CGRect(x: y, y: x, width: width, height: 21)
+                    label.center.x = y + height
+                    label.center.y = x + (width/2)
+
+                }
+                
+                tempView.alpha = 0.3
+                label.textAlignment = .center
+                label.textColor = .black
+                label.font = UIFont(name:"Courier", size: 17.0)
+
+                if(height < 180 && width < 470){
+                    tempView.backgroundColor = .green
+                    label.backgroundColor = .green
+                    label.text = "Safe!"
+                }else{
+                    tempView.backgroundColor = .red
+                    label.backgroundColor = .red
+                    label.text = "Stay back!"
+                }
+                self.views.append(tempView)
+                self.labels.append(label)
+            }
+        }
+        if(self.views.count > 0 && self.views.count == self.labels.count){
+            for i in 0...self.views.count-1{
+                self.view.addSubview(self.views[i])
+                self.view.addSubview(self.labels[i])
+            }
+        }
+        }
+    }
+    func clearLayers(){
+        DispatchQueue.main.async {
+
+        if(self.views.count > 0 && self.views.count == self.labels.count){
+            for i in 0...self.views.count-1{
+                self.views[i].removeFromSuperview()
+                self.labels[i].removeFromSuperview()
+            }
+            self.views.removeAll()
+            self.labels.removeAll()
+        }
+        }
+    }
+    
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
      bannerView.translatesAutoresizingMaskIntoConstraints = false
@@ -142,4 +163,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                            constant: 0)
        ])
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
 }
+
