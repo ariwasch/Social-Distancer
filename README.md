@@ -11,6 +11,14 @@ Hold phone horizontally while directed at people. If the box around a person is 
 
 If there is no box when the camera is pointed at a person, than the camera does not see the person clear enough.
 
-works best when person is standing.
+works best when the target person is standing.
 
-For more information, email ariwasch@gmail.com
+# Releases
+
+Apple version can be found here:
+https://apps.apple.com/us/app/social-distancer/id1504174916?l=lt
+
+Android version can be found here:
+
+# Contact us
+For more information, email ariwasch@gmail.com or lincolndoney@outlook.com
