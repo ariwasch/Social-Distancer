@@ -20,9 +20,13 @@ https://apps.apple.com/us/app/social-distancer/id1504174916?l=lt
 
 Android version can be found here:
 https://github.com/ariwasch/Social-Distancer/releases
+
 or
+
 https://drive.google.com/file/d/108Vxset4G95TYdeXaFu9S7vgeZyt7fbz/view
 
-Due to delays in 
+The Google Play Store has longer than expected delays for app reviewing, so the Android version will be available for download here temporarily because we are eager to release this app, so it is of value during this worldwide crisis. 
+
 # Contact us
+
 For more information, email ariwasch@gmail.com or lincolndoney@outlook.com
