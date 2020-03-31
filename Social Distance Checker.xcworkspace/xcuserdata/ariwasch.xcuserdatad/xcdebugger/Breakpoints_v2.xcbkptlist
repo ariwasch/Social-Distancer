@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2C9E2BB9-3EFD-4A3F-B72F-1541B08D332C"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FD7A28F-91E5-4760-9780-9B4BE73B77AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Social Distance Checker/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "9FD7A28F-91E5-4760-9780-9B4BE73B77AF - c5ec02503d10777b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Social_Distancer.AppDelegate.__deallocating_deinit"
+                  moduleName = "Social Distancer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ariwasch/Desktop/Social%20Distance%20Checker/Social%20Distance%20Checker/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "9FD7A28F-91E5-4760-9780-9B4BE73B77AF - e859d13b8466c932"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Social_Distancer.AppDelegate.__allocating_init() -&gt; Social_Distancer.AppDelegate"
+                  moduleName = "Social Distancer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ariwasch/Desktop/Social%20Distance%20Checker/Social%20Distance%20Checker/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "9FD7A28F-91E5-4760-9780-9B4BE73B77AF - 76c54b947e2b8662"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Social_Distancer.AppDelegate.init() -&gt; Social_Distancer.AppDelegate"
+                  moduleName = "Social Distancer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ariwasch/Desktop/Social%20Distance%20Checker/Social%20Distance%20Checker/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "9FD7A28F-91E5-4760-9780-9B4BE73B77AF - 71a59c1e75a803e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Social Distancer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ariwasch/Desktop/Social%20Distance%20Checker/Social%20Distance%20Checker/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
