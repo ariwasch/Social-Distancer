@@ -23,7 +23,7 @@ https://github.com/ariwasch/Social-Distancer/releases
 
 or here: https://drive.google.com/file/d/108Vxset4G95TYdeXaFu9S7vgeZyt7fbz/view
 
-**The Google Play Store has longer than expected delays for app reviewing, so the Android version will be available for download here temporarily because we are eager to release this app, so it is of value during this worldwide crisis.
+**The Google Play Store has longer than expected delays for app reviewing, so the Android version will be available for download here temporarily because we are eager to release this app, so it is of value during this worldwide crisis.**
 
 # Contact us
 
