@@ -16,12 +16,10 @@ works best when the target person is standing.
 # Releases
 
 Apple version can be found here:
-https://apps.apple.com/us/app/social-distancer/id1504174916?l=lt
+https://ariwasch.applivery.io/social-distancer
 
 Android version can be found here:
-https://github.com/ariwasch/Social-Distancer/releases
-
-or here: https://drive.google.com/file/d/108Vxset4G95TYdeXaFu9S7vgeZyt7fbz/view
+https://play.google.com/store/apps/details?id=org.microincorporated.socialdistancer
 
 **The Google Play Store has longer than expected delays for app reviewing, so the Android version will be available for download here temporarily because we are eager to release this app, so it is of value during this worldwide crisis.**
 
