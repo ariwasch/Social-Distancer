@@ -21,7 +21,7 @@ https://ariwasch.applivery.io/social-distancer
 Android version can be found here:
 https://play.google.com/store/apps/details?id=org.microincorporated.socialdistancer
 
-**The Google Play Store has longer than expected delays for app reviewing, so the Android version will be available for download here temporarily because we are eager to release this app, so it is of value during this worldwide crisis.**
+**Social Distancer was taken down from the app store after Apple introduced new policies to prevent the spread of false information of Covid-19. That means no social distancing or Covid-19 related apps are allowed to be published by individuals. If anyone who is reading this is part of a recognized institution (hospital, government agency, university) and would be willing to publish it, the developers of both the Apple and Android version would be willing to do so.**
 
 # Contact us
 
